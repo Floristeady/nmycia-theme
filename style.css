@@ -954,21 +954,21 @@ article {
 
 /*areas-section*/
 
-#areas-section .title-section, .aditional-section .text-section {
+.areas-section .title-section, .aditional-section .text-section {
 	padding: 2em 1em;
 }
 
-#areas-section .title-section h1, .aditional-section .text-section h1 {
+.areas-section .title-section h1, .aditional-section .text-section h1 {
 	text-transform: uppercase;
 	text-align: center;
 }
 
-#areas li {
+#areas-list li {
 	padding:0;
 	position: relative;
 }
 
-#areas li .text {
+#areas-list li .text {
 	position: absolute;
 	bottom: 0em;
 	border-top: 1px solid rgba(255, 255, 255,.1);
@@ -977,7 +977,7 @@ article {
 	margin: 0 5%;
 }
 
-#areas li .title {
+#areas-list li .title {
 	color: white;
 	text-transform: uppercase;
 	font-family: 'Droid Serif', serif;
@@ -985,7 +985,7 @@ article {
 	
 }
 
-#areas li .btn {
+#areas-list li .btn {
 	float: right;
 	color: rgba(255, 255, 255,.9);
 	text-transform: uppercase;

@@ -12,7 +12,8 @@ get_header(); ?>
 	
 		<?php while ( have_posts() ) : the_post(); ?>
 			
-			<?php  $rows = get_field('gallery_home');  ?>
+			<?php // Gallery home
+			$rows = get_field('gallery_home');  ?>
 			<?php if($rows) { ?>
 			<div id="home-gallery" class="flexslider">
 					<ul class="slides">
@@ -99,99 +100,76 @@ get_header(); ?>
 										<?php echo $text; ?>
 									</div>
 								</div>
-							
 							</div>
 							<?php endif; ?>
-			        	
-			        	<?php if($title): ?>
-			        	<?php endif; ?>
-			        	
+
 						</div><!--content-section-->
+						
+						
+					<?php  //content_featured
+				        elseif( get_row_layout() == 'content_featured' ): ?>
+				        
+				        <?php 
+				        	$id = get_sub_field('id_section_featured'); 
+				        	$title_left = get_sub_field('title_left_featured');
+				        	$subtitle_left = get_sub_field('subtitle_left_featured');
+				        	$link_left = get_sub_field('link_left_featured');
+				        	$text_left = get_sub_field('text_left_featured');
+				        	
+				        	$title_right = get_sub_field('title_right_featured');
+				        	$subtitle_right = get_sub_field('subtitle_right_featured');
+				        	$link_right = get_sub_field('link_right_featured');
+			        	?>
+				        
+				        <div id="<?php echo $id; ?>" class="featured-section" data-equalizer>
+							<div class="column medium-8 large-7">
+								<div class="left-section" data-equalizer-watch>
+									<div class="inner">
+										<div class="intro-section column medium-4">
+											<h4><?php echo $subtitle_left; ?></h4>
+											<h1><?php echo $title_left; ?></h1>
+											<a class="button-line button-white" href="<?php echo $link_left; ?>"><?php _e('Saber más', 'nmycia'); ?></a>
+										</div>
+										
+										<div class="column medium-offset-1 medium-7">
+											<p><?php echo $text_left; ?></p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							<div class="column medium-4 large-5">
+								
+								<div class="right-section" data-equalizer-watch>
+									<div class="inner">
+										<h4><?php echo $subtitle_right; ?></h4>
+										<h1><?php echo $title_right; ?></h1>
+										<a class="button-line" href="<?php echo $link_right; ?>"><?php _e('Saber más', 'nmycia'); ?></a>
+
+									</div>
+								</div>
+								
+							</div>
+			
+						</div><!--featured-section-->
+				        
 			        <?php endif; ?>
 			
 			   <?php endwhile;  ?>
 			
 			<?php endif; ?>
 			
-			<div class="content-section hide">
-				
-				<div class="column medium-6">
-					<div class="title-section">
-						<div class="inner">
-							<h4>Estudio</h4>
-							<h1>Nieto, Moran & Cía. Abogados</h1>
-						</div>
-					</div>
-					
-					<div class="excerpt-section">
-						<div class="inner">
-							<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</h2>
-						</div>
-						
-					</div>
-				</div>
-				
-				<div class="column medium-6 content-text">
-					<div class="text-section">
-						
-						<div class="inner">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.</p>
- 
-							<p>Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.</p>
-						</div>
-					</div>
-				
-				</div>
-					
-				<div class="thumbnail">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/test/1400x800_2.jpg" alt="1400x800_1">
-				</div>
+			<?php if($title): ?>
+			<?php endif; ?>
 
-			</div>
-
-			<div class="featured-section" data-equalizer>
-				<div class="column medium-8 large-7">
-					<div class="left-section" data-equalizer-watch>
-						<div class="inner">
-							<div class="intro-section column medium-4">
-								<h4>Nuestro equipo</h4>
-								<h1>Abogados</h1>
-								<a class="button-line button-white" href="">Saber más</a>
-							</div>
-							
-							<div class="column medium-offset-1 medium-7">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="column medium-4 large-5">
-					
-					<div class="right-section" data-equalizer-watch>
-						<div class="inner">
-							<h4>Nuestro equipo</h4>
-							<h1>Consultores</h1>
-							<a class="button-line" href="">Saber más</a>
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="thumbnail">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/test/1400x800_3.jpg" alt="1400x800_1">
-				</div>
-
-			</div>
-
-			<div id="areas-section">
+			<div id="areas" class="areas-section">
 				
 				<div class="title-section">
 					<h1>Áreas de Práctica</h1>
 				</div>
 				
-				<ul id="areas" class="small-block-grid-2 medium-block-grid-3">
+				<ul id="areas-list" class="small-block-grid-2 medium-block-grid-3">
 					<li>
 						<a href="#" class="img">
 							<img width="500" src="<?php echo get_template_directory_uri(); ?>/images/test/1400x800_3.jpg" alt="1400x800_1">
