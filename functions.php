@@ -46,6 +46,8 @@ function nmycia_setup() {
 	add_image_size( 'large-top-image', 1400, 212, true  );
 	add_image_size( 'large-content-image', 1400, 800, true );
 	add_image_size( 'medium-content-image', 560, 320, true );
+	add_image_size( 'large-area-image', 1000, 600, false );
+	add_image_size( 'medium-team-image', 560, 700, false );
 
 	// Make theme available for translation
 	// Translations can be filed in the /languages/ directory
@@ -76,7 +78,15 @@ function nmycia_setup() {
 	
 } endif;
 
-
+/**
+ * ADF PRO Options Page
+ * @since nmycia 1.0
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
 /**
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
@@ -238,7 +248,7 @@ function nmycia_font_url() {
 	 * by Lato, translate this to 'off'. Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Font: on or off', 'nmycia' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Cabin:400,700,400italic|Droid+Serif:400,400italic' ), "//fonts.googleapis.com/css" );
+		$font_url = add_query_arg( 'family','Cabin:400,700,400italic|Droid+Serif:400,400italic', "//fonts.googleapis.com/css" );
 	}
 
 	return $font_url;
@@ -266,12 +276,7 @@ function nmycia_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'nmyciasteady-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
-	}
 
-	
 }
 add_action( 'wp_enqueue_scripts', 'nmycia_scripts' );
 
@@ -542,6 +547,28 @@ function my_default_content( $post_content, $post ) {
     return $post_content;
 }
 add_filter( 'default_content', 'my_default_content', 10, 2 );
+
+/**
+ * Hide Admin Bar 
+ *
+ * @since nmycia 1.0
+ *
+*/
+//show_admin_bar(false);
+
+
+/**
+ * Fix Admin 
+ *
+ * @since nmycia 1.0
+ *
+*/
+function admin_menu_fix() {
+  echo '<style>
+    #adminmenu { transform: translateZ(0); }
+  </style>';
+}
+add_action('admin_head', 'admin_menu_fix');
 
 
 ?>

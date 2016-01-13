@@ -10,27 +10,27 @@
 get_header(); ?>
 
 
-<div id="content" class="site-content" role="main">
-<?php
+<div id="content" class="site-content grey">
 	
-	if ( have_posts() ) :
-		// Start the Loop.
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'content', get_post_format() );
-
-		endwhile;
-		nmycia_paging_nav();
-
-	else :
-		get_template_part( 'content', 'none' );
-
-	endif;
-?>
+	<div class="row">
+	<?php
+		
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+	
+				get_template_part( 'content', get_post_format() );
+	
+			endwhile;
+			nmycia_paging_nav();
+	
+		else :
+			get_template_part( 'content', 'none' );
+	
+		endif;
+	?>
+	</div>
 
 </div>
 
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

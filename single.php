@@ -9,7 +9,11 @@
 
 get_header(); ?>
 
-<div id="content" class="site-content" role="main">
+<div id="content" class="site-content grey">
+	
+	<?php nmycia_post_thumbnail(); ?>
+	
+	<div class="row">
 
 	<?php
 		
@@ -24,9 +28,9 @@ get_header(); ?>
 			}
 		endwhile;
 	?>
+	
+	</div>
 
 </div><!-- #content -->
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

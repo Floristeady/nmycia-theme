@@ -14,7 +14,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> ><!--<![endif]-->
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 			
 	    <meta name="description" content="<?php echo '' . get_bloginfo ( 'description' );  ?>">
@@ -34,41 +34,59 @@
 ?>
 	</head>
 	<body <?php body_class(); ?>>
+		
+		<div class="drawer drawer-right">
 				
-		<header id="header" role="banner">
-
-			<div class="header-main">
+			<header id="header" role="banner">
 				
-				<?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
-				<ul class="widget-list">
-					<?php dynamic_sidebar( 'primary-widget-area' ); ?>
-				</ul>
-				<?php endif; ?>
+				<div class="drawer-header show-for-small-only">
+				    <button type="button" class="drawer-toggle drawer-hamburger">
+				      <span class="sr-only">toggle navigation</span>
+				      <span class="drawer-hamburger-icon"></span>
+				    </button>
+				  </div>
+				  
+				  <div class="drawer-main drawer-default show-for-small-only">
+				    <nav class="drawer-nav" role="navigation">
+				      
+				      <?php wp_nav_menu( array( 'menu_class' => 'drawer-menu', 'theme_location' => 'primary' ) ); ?>
 				
-				<?php global $logo, $options, $logo_settings;
-				$logo_settings = get_option('plugin_options', $options ); 
-				error_reporting(E_ALL ^ E_NOTICE);
-				?>
-			
-				<div id="site-title">
-					
-					<?php if( $logo_settings['logo_theme_url'] ) : ?>
-					<h1><a href="<?php echo bloginfo('url'); ?>" class="logo"><img src="<?php echo $logo_settings['logo_theme_url']; ?>" alt="<?php bloginfo('name'); ?>" /> </a></h1>
-				<?php  else : ?>
-					<h1><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php endif; ?>
-			  
-					<h2><?php bloginfo( 'description' ); ?></h2>
-
+				      <div class="drawer-footer"><span></span></div>
+				    </nav>
 				</div>
+	
+				<div class="header-main">
+					
+					<?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
+					<ul class="widget-list">
+						<?php dynamic_sidebar( 'primary-widget-area' ); ?>
+					</ul>
+					<?php endif; ?>
+					
+					<?php global $logo, $options, $logo_settings;
+					$logo_settings = get_option('plugin_options', $options ); 
+					error_reporting(E_ALL ^ E_NOTICE);
+					?>
 				
-				<nav id="access" role="navigation" class="show-for-medium-up">
-					<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'nmycia' ); ?></a>
-					<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->
-			</div>
-
-		</header>
-
-		<section id="main" role="main">
+					<div id="site-title">
+						
+						<?php if( $logo_settings['logo_theme_url'] ) : ?>
+						<h1><a href="<?php echo bloginfo('url'); ?>" class="logo"><img src="<?php echo $logo_settings['logo_theme_url']; ?>" alt="<?php bloginfo('name'); ?>" /> </a></h1>
+					<?php  else : ?>
+						<h1><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php endif; ?>
+				  
+						<h2><?php bloginfo( 'description' ); ?></h2>
+	
+					</div>
+					
+					<nav id="access" role="navigation" class="show-for-medium-up">
+						<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'nmycia' ); ?></a>
+						<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'menu_class' => 'menu-main' ) ); ?>
+					</nav><!-- #access -->
+				</div>
+	
+			</header>
+	
+			<section class="drawer-overlay" id="main" role="main">
 			

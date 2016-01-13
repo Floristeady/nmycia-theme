@@ -1,7 +1,7 @@
 # Translation of nmycia Steady in Spanish (Spain)
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-05-07 18:20-0600\n"
+"PO-Revision-Date: 2015-10-19 09:35-0600\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr "Esto es algo embarazoso, ¿verdad?"
 
 #: 404.php:17 404.php:18
 msgid "It appears the page you are looking for does not exist. Perhaps searching, or one of the links below, can help."
-msgstr "Parece que la página que buscas no existe. Puedes usar el buscador, o volver a la <a href=\"/\">página de inicio.</a>"
+msgstr "Parece que la página que buscas no existe. Puedes usar el menú, o volver a la <a href=\"/\">página de inicio.</a>"
 
 #: archive.php:26
 msgid "Daily Archives: %s"

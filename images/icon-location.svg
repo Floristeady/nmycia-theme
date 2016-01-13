@@ -1,26 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
-	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
-	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
-	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
-	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
-	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
-	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
-	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
-]>
-<svg version="1.1" id="Capa_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="40px"
-	 viewBox="0 0 30 40" enable-background="new 0 0 30 40" xml:space="preserve">
-<metadata>
-	<sfw  xmlns="&ns_sfw;">
-		<slices></slices>
-		<sliceSourceBounds  height="37.505" width="25.43" y="-39.374" x="2.122" bottomLeftOrigin="true"></sliceSourceBounds>
-	</sfw>
-</metadata>
-<path fill="#203A8F" d="M27.552,14.584c0-7.022-5.693-12.716-12.714-12.716c-7.022,0-12.716,5.694-12.716,12.716
-	c0,1.91,0.453,3.705,1.207,5.329H3.296c0.511,0.587,9.9,19.461,11.542,19.461c2.038,0,11.54-19.461,11.54-19.461h-0.032
-	C27.1,18.29,27.552,16.497,27.552,14.584z M14.838,9.542c2.786,0,5.044,2.258,5.044,5.04c0,2.786-2.258,5.045-5.044,5.045
-	c-2.782,0-5.041-2.259-5.041-5.045C9.797,11.8,12.056,9.542,14.838,9.542z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="25px" viewBox="0 0 17 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-location" sketch:type="MSLayerGroup" transform="translate(0.000000, -0.500000)" fill="#203A8F">
+            <path d="M16.7070769,8.88184615 C16.7070769,4.29053846 12.9847308,0.567538462 8.39407692,0.567538462 C3.80276923,0.567538462 0.0797692308,4.29053846 0.0797692308,8.88184615 C0.0797692308,10.1306923 0.375961538,11.3043462 0.868961538,12.3661923 L0.847384615,12.3661923 C1.1815,12.75 7.32046154,25.0906923 8.39407692,25.0906923 C9.72661538,25.0906923 15.9394615,12.3661923 15.9394615,12.3661923 L15.9185385,12.3661923 C16.4115385,11.305 16.7070769,10.1326538 16.7070769,8.88184615 L16.7070769,8.88184615 Z M8.39407692,5.58515385 C10.2156923,5.58515385 11.6920769,7.06153846 11.6920769,8.88053846 C11.6920769,10.7021538 10.2156923,12.1791923 8.39407692,12.1791923 C6.57507692,12.1791923 5.09803846,10.7021538 5.09803846,8.88053846 C5.09803846,7.06153846 6.57507692,5.58515385 8.39407692,5.58515385 L8.39407692,5.58515385 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
 </svg>
