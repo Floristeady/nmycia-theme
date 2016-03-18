@@ -41,6 +41,10 @@ get_header(); ?>
 			</div>
 			<?php } ?>
 			
+			<?php // Logos Content
+				include('inc/logos-content.php');
+			?>
+			
 			<?php // Flexible Content
 				include('inc/flexible-content.php');
 			?>

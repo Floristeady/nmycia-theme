@@ -49,7 +49,8 @@ jQuery(function ($) {
 	}
 	
 	function homeGallery() {  
-		if (browserwidth >= largewidth) {
+
+		if (browserwidth >= mediumwidth) {
 			fixFlexsliderHeight();  
 		}
 		
@@ -81,6 +82,9 @@ jQuery(function ($) {
 	
 	function fixFlexsliderHeight() {
 	    // Set fixed height based on the tallest slide
+	    var heightLogos = $('#logos-section').outerHeight();
+	    //console.log(heightLogos);
+	    
 	    $('.flexslider').each(function(){
 	        var sliderHeight = 0;
 	        $(this).find('.slides > li').each(function(){
@@ -89,7 +93,7 @@ jQuery(function ($) {
 	                sliderHeight = slideHeight;
 	            }
 	        });
-	        $(this).find('ul.slides li img').css({'height' : sliderHeight});
+	        $(this).find('ul.slides li').css({'height' : sliderHeight-heightLogos});
 	    });
 	}
 	
@@ -194,6 +198,7 @@ jQuery(function ($) {
 	}
 	
 	function menuPages() {
+		
 		//Menu pages 
 		var _href = $('.menu-main > li > a, #footer .menu  a, .drawer-menu > li > a');
 		var page = $("html, body");
@@ -201,7 +206,12 @@ jQuery(function ($) {
 		$(_href).each(function() {
 		   _href = $(this).attr("href"); 
 		   
-		   $(this).attr("href",'/'+ _href);
+		   // if url is for english version
+		   if(window.location.href.indexOf("www.nietomoran.cl/en/") >= 0){
+		   	 $(this).attr("href",'/en/'+ _href);
+		   } else {
+			 $(this).attr("href",'/'+ _href);  
+		   }
 		   
 		   //console.log(_href);
 		});
@@ -227,6 +237,7 @@ jQuery(function ($) {
 	    }
 	
 	    page.hide();
+	    
         $('a[href^=#]').bind("click", jump);
 
         if (location.hash){

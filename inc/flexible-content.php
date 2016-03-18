@@ -96,7 +96,7 @@
 								<?php endif; ?>
 								
 								<?php if($link_left): ?>
-								<a class="button-line button-white" href="<?php echo $link_left; ?>"><?php _e('Saber más', 'nmycia'); ?></a>
+								<a class="button-line button-white" href="<?php echo $link_left; ?>"><?php _e('Read more', 'nmycia'); ?></a>
 								<?php endif; ?>
 							</div>
 							
@@ -124,7 +124,7 @@
 							<?php endif; ?>
 							
 							<?php if($link_right): ?>
-							<a class="button-line" href="<?php echo $link_right; ?>"><?php _e('Saber más', 'nmycia'); ?></a>
+							<a class="button-line" href="<?php echo $link_right; ?>"><?php _e('Read more', 'nmycia'); ?></a>
 							<?php endif; ?>
 
 						</div>

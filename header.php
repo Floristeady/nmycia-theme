@@ -50,7 +50,11 @@
 				    <nav class="drawer-nav" role="navigation">
 				      
 				      <?php wp_nav_menu( array( 'menu_class' => 'drawer-menu', 'theme_location' => 'primary' ) ); ?>
-				
+					 <?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
+					 <ul class="widget-header widget-list">
+						<?php dynamic_sidebar( 'primary-widget-area' ); ?>
+					 </ul>
+					 <?php endif; ?>
 				      <div class="drawer-footer"><span></span></div>
 				    </nav>
 				</div>
@@ -58,7 +62,7 @@
 				<div class="header-main">
 					
 					<?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
-					<ul class="widget-list">
+					<ul class="widget-header widget-list">
 						<?php dynamic_sidebar( 'primary-widget-area' ); ?>
 					</ul>
 					<?php endif; ?>

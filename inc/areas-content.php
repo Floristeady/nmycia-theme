@@ -44,7 +44,7 @@
 					</a>
 					<a class="text" href="<?php echo $permalink; ?>">
 						<span class="title"><?php echo $childtitle; ?></span>
-						<span class="btn"><?php _e('Saber más >', 'nmycia'); ?></span>
+						<span class="btn"><?php _e('Read more >', 'nmycia'); ?></span>
 					</a>
 				</div>
 			</li>
