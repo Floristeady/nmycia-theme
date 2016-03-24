@@ -1770,6 +1770,10 @@ a.post-thumbnail:hover img {
 		
 		#header.mini #site-title h1 a img {
 			display: none;}
+			
+		#header.mini .widget-header {
+			display: none;
+		}
 	
 }
 
